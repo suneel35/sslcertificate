@@ -1,0 +1,33 @@
+server {
+    listen 80;
+    server_name www.alwaysrunserver.ml alwaysrunserver.ml;
+
+    include snippets/letsencrypt.conf;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name www.alwaysrunserver.ml;
+
+    ssl_certificate /etc/letsencrypt/live/alwaysrunserver.ml/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/alwaysrunserver.ml/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/alwaysrunserver.ml/chain.pem;
+    include snippets/ssl.conf;
+    include snippets/letsencrypt.conf;
+
+    return 301 https://alwaysrunserver.ml$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name alwaysrunserver.ml;
+
+    ssl_certificate /etc/letsencrypt/live/alwaysrunserver.ml/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/alwaysrunserver.ml/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/alwaysrunserver.ml/chain.pem;
+    include snippets/ssl.conf;
+    include snippets/letsencrypt.conf;
+
+    # . . . other code
+}

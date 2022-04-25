@@ -8,3 +8,7 @@ Nginx Configuration URL
 
 https://frugalisminds.com/configure-ssl-nginx-lets-encrypt-centos/
 
+configuration nginx for ubuntu
+
+https://www.linode.com/docs/guides/how-to-configure-nginx/
+

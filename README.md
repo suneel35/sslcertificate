@@ -2,6 +2,8 @@
 
 Apache2 ssl certificate update
 
+https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04
+
 https://linuxize.com/post/secure-apache-with-let-s-encrypt-on-ubuntu-20-04/
 
 Apache configuration URL

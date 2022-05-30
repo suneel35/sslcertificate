@@ -1,0 +1,38 @@
+
+
+#suresh.cvsuneel.ml.conf
+
+
+<VirtualHost *:80>
+    ServerName suresh.cvsuneel.ml
+    ServerAlias www.suresh.cvsuneel.ml
+    ServerAdmin webmaster@cvsuneel.ml
+    DocumentRoot /var/www/suresh/index.html
+  
+  Alias / "/var/www/suresh/index.html"
+    <Directory /var/www/suresh/index.html>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/suresh.com-error.log
+    CustomLog ${APACHE_LOG_DIR}/suresh.com-access.log combined
+</VirtualHost>
+
+#suneel.cvsuneel.ml.conf
+
+<VirtualHost *:80>
+    ServerName suresh.cvsuneel.ml
+    ServerAlias www.suneel.cvsuneel.ml
+    ServerAdmin webmaster@cvsuneel.ml
+    DocumentRoot /var/www/suneel/index.html
+  
+  Alias / "/var/www/suneel/index.html"
+    <Directory /var/www/suneel/index.html>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/suresh.com-error.log
+    CustomLog ${APACHE_LOG_DIR}/suresh.com-access.log combined
+</VirtualHost>
